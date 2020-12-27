@@ -3,7 +3,7 @@
 
 # **<span style="color:#4886FF">✨Today I Learned 2021✨</span>** 
 
-### **<span style="color:#4886FF">TIL RULE</span>**  ✨2020.12.28 STRAT✨
+### **<span style="color:#4886FF">✨TIL RULE</span>** - 2020.12.28 STRAT✨
 #### 📌 매일은 아니어도 주에 한 번이라도 한다. <br>
 #### 📌 작성규칙은 만들어 둔 폼을 적극 활용한다. <br>
 #### 📌 내가 다시 읽었을 때, 이해할 수 있도록 작성한다. <br>
@@ -34,3 +34,10 @@
 * **무엇보다 재밌습니다.** 
 <br> 기록하고 다시 읽어보는 즐거움이 있어요.
 
+
+
+---
+### _BACK UP_
+
+<a href="https://github.com/mini-luster/til-mini">
+<img src="https://img.shields.io/badge/Today I Learned 2020.ver-000000?style=flat-square&logo=GitHub&logoColor=white&link="/></a>

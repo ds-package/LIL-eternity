@@ -25,7 +25,7 @@ TOBE CODE : 있다면 반드시 기록할 것 !
 <p align="center">
   <img src="./asset/image/ex_image2.png" width="405" />
   <img src="./asset/image/ex_image2.png" width="405" />
-  *이미지 첨부 시 참고*
+  <br>*이미지 첨부 시 참고*
 </p>
 ---
 
