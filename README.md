@@ -1,4 +1,3 @@
-## Today I Learned 2021
 ![top_image](./use_image/hero_image.png)
 
 
