@@ -1,0 +1,151 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  background-color: #BBDEFB;
+}
+
+li {
+  list-style: none;
+  float: left;
+  margin-left: 24px;
+  color: #BBDEFB;
+}
+
+a {
+  color: #BBDEFB;
+}
+
+#wrap {
+  width: 1200px;
+  background-color:#64B5F6;
+  margin-top: 42px;
+}
+
+header{
+  width: 100%;
+  height: 150px;
+  background-color:#2196F3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  height: 150px;
+  background-color: #1976D2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside {
+  width: 30%;
+  height: 700px;
+  float: left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color:#0D47A1;
+  color: #BBDEFB;
+
+}
+
+h3 {
+  margin: 24px;
+}
+
+section {
+  width: 70%;
+  height: 700px;
+  float: left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2196F3;
+  color: #BBDEFB;
+
+  overflow: scroll;
+
+
+}
+
+article {
+  margin: 32px;
+  word-break: keep-all;
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  clear: both;
+  background-color: #2962FF;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 화면너비 0 ~ 1200 Px  */
+
+@media (max-width: 1220px){
+
+#wrap {
+  width: 95%;
+}
+
+}
+
+/* 화면너비 0 ~  768Px  */
+
+
+@media (max-width: 768px){
+
+  #wrap {
+    width: 100%;
+    margin-top: 0px;
+  }
+  aside, section {
+    height: 800px;
+  }
+  }
+
+  /* 화면너비 0 ~  480Px  */
+
+
+@media (max-width: 480px){
+
+  #wrap {
+    width: 100%;
+    margin-top: 0px;
+  }
+  header{
+    height: 300px;
+  }
+  aside {
+    float: none;
+    width: 100%;
+    height:300px;
+  }
+  section {
+    float: none;
+    width: 100%;
+    height:50vh;
+    align-items:flex-start;
+  }
+
+  }
+
+
+
