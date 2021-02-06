@@ -16,9 +16,17 @@ canvas {
 
 .title {
   color: #3E4455;
-  font-size: 80px;
+  font-size: 20px;
   position: absolute;
   left : 50%; 
   top: 50%;
   transform:translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title h1 {
+  margin: 0;
 }
