@@ -91,7 +91,6 @@ function check() {
   return true;
 }
 
-function test(){
+function test() {
 
-} 
-      
+}
