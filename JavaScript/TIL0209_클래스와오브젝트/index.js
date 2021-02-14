@@ -53,3 +53,86 @@ class User {
 
 const user1 = new User('Steve', 'job', -1);
 console.log(user1.age);
+
+
+// 03.Public&Private
+
+class Experiment {
+  publicField = 2;
+  #privateField = 0;
+}
+
+const experiment = new Experiment();
+console.log(experiment.publicField);
+console.log(experiment.privateField);
+
+
+// 04.Static
+
+class Article {
+  static publisher = 'minhee good';
+  constructor(articleNumber) {
+    this.articleNumber = articleNumber;
+  }
+
+  static printPublisher() {
+    console.log(Article.publisher);
+  }
+}
+
+const article1 = new Article(1);
+const article2 = new Article(2);
+
+console.log(article1.publisher);
+console.log(Article.publisher);
+Article.printPublisher();
+
+
+//  05.상속과다양성
+
+class shape {
+  constructor(width, height, color) {
+    this.width = width;
+    this.height = height;
+    this.color = color;
+  }
+
+  draw() {
+    console.log(`drawing ${this.color} color !!!`);
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+class Rectangle extends shape { }
+class Triangle extends shape {
+  draw() {
+    super.draw();
+    console.log(`🔺🔺🔺🔺🔺`)
+  }
+
+  getArea() {
+    return (this.width * this.height) / 2;
+  }
+}
+
+const rectagle = new Rectangle(20, 20, `blue`);
+
+rectagle.draw();
+console.log(rectagle.getArea());
+
+const triangle = new Triangle(20, 20, `red`);
+
+triangle.draw();
+console.log(triangle.getArea());
+
+
+// 06.instanceOf
+
+console.log(rectagle instanceof Rectangle);
+console.log(triangle instanceof Rectangle);
+console.log(triangle instanceof Triangle);
+console.log(triangle instanceof shape);
+console.log(triangle instanceof Object);
