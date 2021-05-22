@@ -1,4 +1,4 @@
-# TIL 작성규칙 : JS
+# TIL 작성규칙 : Jekyll
 
 **<span style="color:#4886FF">TITLE</span>** : TIL{Date}\_{lowerCamelCase}
 
@@ -8,9 +8,7 @@
 오늘 배운 것 한 줄 정리
 ```
 
-### **EX시도한 것**
-
-![ex_image](./asset/image/ex_image.png)
+### **시도한 것**
 
 ```
 ASIS CODE
@@ -20,11 +18,6 @@ ASIS CODE
 TOBE CODE : 있다면 반드시 기록할 것 !
 ```
 
-<p align="center">
-  <img src="./asset/image/ex_image2.png" width="405" />
-  <img src="./asset/image/ex_image2.png" width="405" />
-  <br>*이미지 첨부 시 참고*
-</p>
 ---
 
 ### **Reference**
