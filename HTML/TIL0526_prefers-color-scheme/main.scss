@@ -1,0 +1,79 @@
+// 참고 코드 https://codepen.io/destro014/pen/dyyKqBd
+// 참고 유튜브 https://www.youtube.com/watch?v=OMaw2VYVZs4&t=187s
+// 더 참고해야할 링크 https://xenosium.com/entry/8665/
+
+$colors: (
+  base: #fff,
+  text: #000,
+  base2: #efefef,
+  text2: #111,
+);
+
+$colors-dark: (
+  base: #000000,
+  text: #ffffff,
+  base2: #111111,
+  text2: #eeeeee,
+);
+
+// $colors-dark: (
+//   base: map-get($colors, text),
+//   text: map-get($colors, base),
+//   base2: map-get($colors, base2),
+//   text2: map-get($colors, text2),
+// );
+
+:root {
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+  --theme: "light";
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $name, $color in $colors-dark {
+      --color-#{$name}: #{$color};
+    }
+    --theme: "dark";
+  }
+}
+
+//
+
+@function getColor($color-name) {
+  @return var(--color-#{$color-name});
+}
+
+// html 스타일링
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: getColor(base);
+  .card {
+    margin-top: 24px;
+    width: 320px;
+    height: 420px;
+    border-radius: 16px;
+    padding: 20px;
+
+    background-color: getColor(base2);
+
+    h1 {
+      color: getColor(text);
+      &::after {
+        content: var(--theme);
+      }
+    }
+    p {
+      color: getColor(text2);
+    }
+  }
+}

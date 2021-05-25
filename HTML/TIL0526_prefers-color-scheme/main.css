@@ -1,0 +1,56 @@
+:root {
+  --color-base: #fff;
+  --color-text: #000;
+  --color-base2: #efefef;
+  --color-text2: #111;
+  --theme: "light";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: #000000;
+    --color-text: #ffffff;
+    --color-base2: #111111;
+    --color-text2: #eeeeee;
+    --theme: "dark";
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--color-base);
+}
+
+.container .card {
+  margin-top: 24px;
+  width: 320px;
+  height: 420px;
+  border-radius: 16px;
+  padding: 20px;
+  background-color: var(--color-base2);
+}
+
+.container .card h1 {
+  color: var(--color-text);
+}
+
+.container .card h1::after {
+  content: var(--theme);
+}
+
+.container .card p {
+  color: var(--color-text2);
+}
+/*# sourceMappingURL=main.css.map */
