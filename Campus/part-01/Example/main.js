@@ -1,16 +1,7 @@
-let boxEL = document.querySelector('.box');
 
-console.log(boxEL);
+const boxEl = document.querySelector('.box');
 
-boxEL.addEventListener('click',function(){
-  console.log("click했구나?!")
-});
+console.log(boxEl.textContent);
 
-
-boxEL.classList.remove('active');
-let isContains = boxEL.classList.contains('active');
-
-console.log(isContains);
-
-
-
+boxEl.textContent = "minhee!!";
+console.log(boxEl.textContent);
