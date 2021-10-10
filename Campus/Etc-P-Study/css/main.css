@@ -1,24 +1,150 @@
+/* common */
+
 body {
   font-family: 'Gothic A1', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
-  color: #333;
+  color: #eee;
+  background-color: black;
 }
+
+img, svg {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+
 
 /* header */
 
 header{
-  background-color: blueviolet;
+  background-color: #000;
+  border-bottom: 1px solid rgb(19, 19, 19);
 }
 
 header .inner {
   width: 1200px;
+  height: 120px;
   margin: 0 auto;
-  background-color: cornflowerblue;
+  position: relative;
 }
 
 header .logo {
-  width: 120px;
-  display: block;
+  height: 82px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
+
+header .submenu {
+  position: absolute;
+  align-items: center;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+
+header .submenu ul.menu {
+  display: flex;
+}
+
+header .submenu ul.menu li {
+  position: relative;
+}
+
+/* ::before  가상요소 선택자 :: 기본적으로 인라인 요소이다 */
+/* position: absolute;를 쓰면 디스플레이값이 블록으로 바뀐다 */
+header .submenu ul.menu li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 8px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* :first-child 가상클래스 선택자 :: 기본적으로 인라인 요소이다 */
+header .submenu ul.menu li:first-child::before {
+  display: none;
+}
+
+header .submenu ul.menu li a {
+  font-size: 12px;
+  display: block;
+  padding: 14px 12px;
+  color: #fff;
+}
+
+header .submenu ul.menu li a:hover{
+  color: #ACBBB7;
+}
+
+header .submenu  .search {
+  height: 34px;
+  position: relative;
+}
+
+header .submenu  .search input{
+  width: 34px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  border-radius: 20px;
+  outline: none;
+  background-color:transparent;
+  color: #ACBBB7;
+  font-size: 12px;
+  transition: width .4s;
+}
+
+header .submenu  .search input:focus {
+  width: 200px;
+  border-color: #ACBBB7;
+}
+
+header .submenu  .search .material-icons{
+  height: 20px;
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 6px;
+  margin: auto;
+  transition: .4s;
+}
+
+header .submenu  .search.focused .material-icons {
+  opacity: 0;
+}
+
+header .main-menu {
+  display: flex;
+}
+
+header .main-menu .item {
+
+}
+
+header .main-menu .item .item__name{
+  padding: 10px 20px 32px 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+header .main-menu .item:hover .item__name{
+  background-color: #ACBBB7;
+  color: #000;
+}
+
+header .main-menu .item .item__contents {}
