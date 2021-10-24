@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <!-- https://beomi.github.io/2017/03/20/Using-ES6-JSX-on-Client/  -->
+    <!-- 왜 작동이 안됐을까했더니.. 바벨을 불러와야했음  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      console.log(React);
+      console.log(ReactDOM);
+
+      // ClassComponent
+      // 정의
+      // class ClassComponent extends React.Component {
+      //   render() {
+      //     return <div>Hello</div>;
+      //   }
+      // }
+
+      // // 사용
+
+      // ReactDOM.render(<ClassComponent />, document.querySelector("#root"));
+
+      // FuntionComponent
+      // 정의 1
+      // function FuntionComponent() {
+      //   return <div>Hello</div>;
+      // }
+      // 정의 2
+      const FuntionComponent = () => <div>Hey~</div>;
+
+      // 사용
+      ReactDOM.render(<FuntionComponent />, document.querySelector("#root"));
+    </script>
+  </body>
+</html>
