@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      console.log(React);
+      console.log(ReactDOM);
+
+      // function 컴포넌트로 만들어보기
+      // function Component() {
+      //   return (
+      //     <div>
+      //       <button
+      //         onClick={() => {
+      //           console.log("clicked");
+      //         }}
+      //       >
+      //         클릭
+      //       </button>
+      //     </div>
+      //   );
+      // }
+
+      // Class 컴포넌트로 만들어보기
+      // class Component extends React.Component {
+      //   state = {
+      //     count: 0,
+      //   };
+      //   render() {
+      //     return (
+      //       <div>
+      //         <p>{this.state.count}</p>
+      //         <button
+      //           onClick={() => {
+      //             console.log("clicked");
+      //             this.setState((state) => ({
+      //               ...state,
+      //               count: state.count + 1,
+      //             }));
+      //           }}
+      //         >
+      //           클릭
+      //         </button>
+      //       </div>
+      //     );
+      //   }
+      // }
+
+      // 인라인으로 함수를 직접쓰는게 아니라 클래스 컴포넌트에 있는 별도의 메소드로 만들고 그 메소드를 활용하는데 그 메소드를 분리하는 작업
+      // class Component extends React.Component {
+      //   state = {
+      //     count: 0,
+      //   };
+
+      // constructor를 사용하는 방법
+
+      // constructor(props) {
+      //   super(props);
+
+      //   this.click = this.click.bind(this);
+      // }
+
+      // render() {
+      //   return (
+      //     <div>
+      //       <p>{this.state.count}</p>
+      //       <button onClick={this.click}>클릭</button>
+      //     </div>
+      //   );
+      // }
+
+      // 인라인으로 함수를 직접쓰는게 아니라 클래스 컴포넌트에 있는 별도의 메소드로 만들고 그 메소드를 활용하는데 그 메소드를 분리하는 작업
+
+      // click = () => , arrow funtion을 활용하는 방법
+      //   click = () => {
+      //     console.log("clicked");
+      //     this.setState((state) => ({
+      //       ...state,
+      //       count: state.count + 1,
+      //     }));
+      //   };
+      // }
+
+      // ReactDOM.render(<Component />, document.querySelector("#root"));
+
+      // 리액트 컴포넌트 라이프사이클을 이해하고 이것저것 해보기
+      //
+
+      class App extends React.component {
+        state = {
+          hasError: false,
+        };
+        render() {
+          if (this.state.hasError) {
+            return <div>예상치 못한 에러가 발생했어요.</div>;
+          }
+
+          // 에러 바운더리 : Error Boundaries
+          return <WebService />;
+        }
+
+        // componentDidCatch 단점 : 자기자신한테 문제가 있을 때 캐치가 안됌
+        componentDidCatch(error, info) {
+          this.setState({ hasError: true });
+        }
+      }
+
+      ReactDOM.render(<App name="Mark" />, document.querySelector("#root"));
+    </script>
+  </body>
+</html>
